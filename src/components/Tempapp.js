@@ -1,15 +1,19 @@
 import React, { useEffect, useState } from "react";
+// import axios from "axios";
 import "./css/style.css";
 
 const Tempapp = () => {
     const [city, setCity] = useState();
     const [search, setSearch] = useState("Hapur");
 
-    // const API = 'https://api.openweathermap.org/data/2.5/weather?q={city name}&appid={e02e62eb4735cfaffd62a79e1af6a5f6}';
+    // const API = `http://api.openweathermap.org/data/2.5/weather?q=${search}&units=metric&appid=161c05337c68b7286d9c8780e2738cc6`;
+
+
+
 
     useEffect(() => {
         const fetchApi = async () => {
-            const url = `http://api.openweathermap.org/data/2.5/weather?q=${search}&units=metric&appid=161c05337c68b7286d9c8780e2738cc6`;
+            const url = `https://api.openweathermap.org/data/2.5/weather?q=${search}&units=metric&appid=161c05337c68b7286d9c8780e2738cc6`;
             const response = await fetch(url);
             const data = await response.json();
             setCity(data.main);
