@@ -6,7 +6,6 @@ const Tempapp = () => {
     const [city, setCity] = useState();
     const [search, setSearch] = useState("Hapur");
 
-    // const API = `http://api.openweathermap.org/data/2.5/weather?q=${search}&units=metric&appid=161c05337c68b7286d9c8780e2738cc6`;
 
 
 
